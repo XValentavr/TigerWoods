@@ -1,0 +1,742 @@
+INFO:aiogram:Bot: Tiger Woods [@ybcgolfbot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ProgrammingError(1045, "1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)", '28000')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'bot'@'localhost' (using password: YES)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 266, in start_message
+    if golf_db.is_golf_user(message.chat.id):
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 26, in is_golf_user
+    conn = database()
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 10, in database
+    conn = mysql.connector.connect(user='bot', password='B1c0R4h7',
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\__init__.py", line 277, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 235, in _open_connection
+    raise errors.get_mysql_exception(msg=exc.msg, errno=exc.errno,
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('469236353')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 291, in mes_text
+    if get_step(message.chat.id) == 'add_1':
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 46, in get_step
+    return data_json[str(chat_id)]['step']
+KeyError: '469236353'
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ProgrammingError(1045, "1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)", '28000')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'bot'@'localhost' (using password: YES)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 266, in start_message
+    if golf_db.is_golf_user(message.chat.id):
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 26, in is_golf_user
+    conn = database()
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 10, in database
+    conn = mysql.connector.connect(user='bot', password='B1c0R4h7',
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\__init__.py", line 277, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 235, in _open_connection
+    raise errors.get_mysql_exception(msg=exc.msg, errno=exc.errno,
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)
+INFO:aiogram:Bot: Tiger Woods [@ybcgolfbot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ProgrammingError(1045, "1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)", '28000')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'bot'@'localhost' (using password: YES)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 266, in start_message
+    if golf_db.is_golf_user(message.chat.id):
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 26, in is_golf_user
+    conn = database()
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 10, in database
+    conn = mysql.connector.connect(user='bot', password='B1c0R4h7',
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\__init__.py", line 277, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 235, in _open_connection
+    raise errors.get_mysql_exception(msg=exc.msg, errno=exc.errno,
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('469236353')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 291, in mes_text
+    if get_step(message.chat.id) == 'add_1':
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 46, in get_step
+    return data_json[str(chat_id)]['step']
+KeyError: '469236353'
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('469236353')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 291, in mes_text
+    if get_step(message.chat.id) == 'add_1':
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 46, in get_step
+    return data_json[str(chat_id)]['step']
+KeyError: '469236353'
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ProgrammingError(1045, "1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)", '28000')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'bot'@'localhost' (using password: YES)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 266, in start_message
+    if golf_db.is_golf_user(message.chat.id):
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 26, in is_golf_user
+    conn = database()
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 10, in database
+    conn = mysql.connector.connect(user='bot', password='B1c0R4h7',
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\__init__.py", line 277, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 235, in _open_connection
+    raise errors.get_mysql_exception(msg=exc.msg, errno=exc.errno,
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-27' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ProgrammingError(1045, "1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)", '28000')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 233, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'bot'@'localhost' (using password: YES)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 266, in start_message
+    if golf_db.is_golf_user(message.chat.id):
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 26, in is_golf_user
+    conn = database()
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 10, in database
+    conn = mysql.connector.connect(user='bot', password='B1c0R4h7',
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\__init__.py", line 277, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 86, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\mysql\connector\connection_cext.py", line 235, in _open_connection
+    raise errors.get_mysql_exception(msg=exc.msg, errno=exc.errno,
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('469236353')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 291, in mes_text
+    if get_step(message.chat.id) == 'add_1':
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 46, in get_step
+    return data_json[str(chat_id)]['step']
+KeyError: '469236353'
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-33' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('469236353')>
+Traceback (most recent call last):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\XValentavr\AppData\Local\Programs\Python\Python38\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 291, in mes_text
+    if get_step(message.chat.id) == 'add_1':
+  File "D:/Work/Bots/TigerWoods/golfbot/golf_bot.py", line 46, in get_step
+    return data_json[str(chat_id)]['step']
+KeyError: '469236353'
+INFO:aiogram:Bot: Tiger Woods [@ybcgolfbot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('469236353')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 291, in mes_text
+    if get_step(message.chat.id) == 'add_1':
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 46, in get_step
+    return data_json[str(chat_id)]['step']
+KeyError: '469236353'
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ProgrammingError(1045, "1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)", '28000')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'bot'@'localhost' (using password: YES)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 266, in start_message
+    if golf_db.is_golf_user(message.chat.id):
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 27, in is_golf_user
+    conn = database()
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 10, in database
+    conn = mysql.connector.connect(user='bot', password='B1c0R4h7',
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\abstracts.py", line 1028, in connect
+    self._open_connection()
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\connection_cext.py", line 241, in _open_connection
+    raise errors.get_mysql_exception(msg=exc.msg, errno=exc.errno,
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('469236353')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 291, in mes_text
+    if get_step(message.chat.id) == 'add_1':
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 46, in get_step
+    return data_json[str(chat_id)]['step']
+KeyError: '469236353'
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=ProgrammingError(1045, "1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)", '28000')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\connection_cext.py", line 236, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Access denied for user 'bot'@'localhost' (using password: YES)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 266, in start_message
+    if golf_db.is_golf_user(message.chat.id):
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 27, in is_golf_user
+    conn = database()
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_db.py", line 10, in database
+    conn = mysql.connector.connect(user='bot', password='B1c0R4h7',
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\__init__.py", line 272, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\connection_cext.py", line 85, in __init__
+    self.connect(**kwargs)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\abstracts.py", line 1028, in connect
+    self._open_connection()
+  File "D:\Study\Epam\Interpretator\lib\site-packages\mysql\connector\connection_cext.py", line 241, in _open_connection
+    raise errors.get_mysql_exception(msg=exc.msg, errno=exc.errno,
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'bot'@'localhost' (using password: YES)
+INFO:aiogram:Bot: Tiger Woods [@ybcgolfbot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: Tiger Woods [@ybcgolfbot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-62' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=PaymentProviderInvalid('Payment_provider_invalid')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 491, in json_box
+    result = await bot.send_invoice(query.message.chat.id, start_parameter='time-machine-example',
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\bot.py", line 3288, in send_invoice
+    result = await self.request(api.Methods.SEND_INVOICE, payload_)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.PaymentProviderInvalid: Payment_provider_invalid
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=PaymentProviderInvalid('Payment_provider_invalid')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 490, in json_box
+    result = await bot.send_invoice(query.message.chat.id, start_parameter='time-machine-example',
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\bot.py", line 3288, in send_invoice
+    result = await self.request(api.Methods.SEND_INVOICE, payload_)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.PaymentProviderInvalid: Payment_provider_invalid
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=SyntaxError("'await' outside async function", ('D:\\Work\\Bots\\TigerWoods\\commands_to_handle\\start.py', 20, 9, '        await training(message)\n', 20, 32))>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 260, in start_message
+    from commands_to_handle.start import start_handle
+  File "D:\Work\Bots\TigerWoods\commands_to_handle\start.py", line 20
+    await training(message)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: 'await' outside async function
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=PaymentProviderInvalid('Payment_provider_invalid')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 563, in json_box
+    result = await bot.send_invoice(
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\bot.py", line 3288, in send_invoice
+    result = await self.request(api.Methods.SEND_INVOICE, payload_)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.PaymentProviderInvalid: Payment_provider_invalid
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'pytz' is not defined")>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 73, in add_train
+    await add_handle(message, bot, admins)
+  File "D:\Work\Bots\TigerWoods\commands_to_handle\add.py", line 27, in add_handle
+    datetime.datetime.now(pytz.timezone("Europe/Kiev"))
+NameError: name 'pytz' is not defined
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-24' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=NameError("name 'pytz' is not defined")>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 73, in add_train
+    await add_handle(message, bot, admins)
+  File "D:\Work\Bots\TigerWoods\commands_to_handle\add.py", line 27, in add_handle
+    datetime.datetime.now(pytz.timezone("Europe/Kiev"))
+NameError: name 'pytz' is not defined
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('add')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 244, in mes_text
+    data["add"]["date"] = message.text
+KeyError: 'add'
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('add')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 244, in mes_text
+    data["add"]["date"] = message.text
+KeyError: 'add'
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError('add')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 244, in mes_text
+    data["add"]["date"] = message.text
+KeyError: 'add'
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=SyntaxError('trailing comma not allowed without surrounding parentheses', ('D:\\Work\\Bots\\TigerWoods\\commands_to_handle\\add.py', 9, 39, 'from golfbot.golf_bot import set_step,\n', 9, 39))>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 72, in add_train
+    from commands_to_handle.add import add_handle
+  File "D:\Work\Bots\TigerWoods\commands_to_handle\add.py", line 9
+    from golfbot.golf_bot import set_step,
+                                          ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-186' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=PaymentProviderInvalid('Payment_provider_invalid')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 81, in json_box
+    await bot.send_invoice(
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\bot.py", line 3288, in send_invoice
+    result = await self.request(api.Methods.SEND_INVOICE, payload_)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.PaymentProviderInvalid: Payment_provider_invalid
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-32' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=PaymentProviderInvalid('Payment_provider_invalid')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 81, in json_box
+    await bot.send_invoice(
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\bot.py", line 3288, in send_invoice
+    result = await self.request(api.Methods.SEND_INVOICE, payload_)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.PaymentProviderInvalid: Payment_provider_invalid
+ERROR:asyncio:Task exception was never retrieved
+future: <Task finished name='Task-36' coro=<Dispatcher._process_polling_updates() done, defined at D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=PaymentProviderInvalid('Payment_provider_invalid')>
+Traceback (most recent call last):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\Work\Bots\TigerWoods\golfbot\golf_bot.py", line 81, in json_box
+    await bot.send_invoice(
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\bot.py", line 3288, in send_invoice
+    result = await self.request(api.Methods.SEND_INVOICE, payload_)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\base.py", line 231, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "D:\Study\Epam\Interpretator\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.PaymentProviderInvalid: Payment_provider_invalid
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
+INFO:aiogram:Bot: GolfBot [@Sportgolf_bot]
+WARNING:aiogram:Updates were skipped successfully.
+INFO:aiogram.dispatcher.dispatcher:Start polling.
