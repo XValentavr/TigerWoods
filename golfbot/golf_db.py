@@ -5,7 +5,7 @@ import mysql.connector
 
 def database():
     conn = mysql.connector.connect(
-        user="mypass", password="mypass", host="localhost", port="3306", database="golfbot"
+        user="root", password="root", host="localhost", port="3306", database="golfbot"
     )
     return conn
 

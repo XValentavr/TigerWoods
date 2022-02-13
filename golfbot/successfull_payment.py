@@ -3,7 +3,7 @@ import string
 
 from aiogram import types
 
-from commands_to_handle import payment_for_trainings
+from golfbot import payment_for_trainings
 from golfbot import golf_db
 from golfbot.golf_bot import posts_cb
 

@@ -39,37 +39,37 @@ def get_step(chat_id):
 
 @dp.message_handler(commands=["add"])
 async def add_train(message):
-    from commands_to_handle.add import add_handle
+    from golfbot.add import add_handle
     await add_handle(message, bot, admins, data)
 
 
 @dp.message_handler(commands=["trainings"])
 async def training(message):
-    from commands_to_handle.trainings import trainings_handler
+    from golfbot.trainings import trainings_handler
     await trainings_handler(message, bot, admins, months, days)
 
 
 @dp.message_handler(commands=["start"])
 async def start_message(message):
-    from commands_to_handle.start import start_handle
+    from golfbot.start import start_handle
     await start_handle(message, bot)
 
 
 @dp.message_handler(content_types=["text"])
 async def mes_text(message):
-    from commands_to_handle import add_training_handler
+    from golfbot.add_handler_command import add_training_handler
     await add_training_handler(message, bot, data, typs, typ)
 
 
 @dp.callback_query_handler(posts_cb.filter())
 async def json_box(query: types.CallbackQuery, callback_data: dict):
-    from commands_to_handle import pay_for_training
+    from golfbot.PayForTraining import pay_for_training
     await pay_for_training(bot, query, callback_data, data)
 
 
 @dp.message_handler(content_types=["successful_payment"])
 async def success(message):
-    from commands_to_handle.successfull_payment import handle_successful_payment
+    from golfbot.successfull_payment import handle_successful_payment
     await handle_successful_payment(message, bot, data, months, days)
 
 

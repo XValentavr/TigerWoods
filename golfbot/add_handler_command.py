@@ -5,7 +5,7 @@ import datetime
 
 from aiogram import types
 
-from commands_to_handle.trainings import trainings_handler
+from golfbot.trainings import trainings_handler
 from golfbot import golf_db
 from golfbot.golf_bot import get_step, set_step
 from golfbot.golf_bot import days, months, admins
