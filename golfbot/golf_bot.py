@@ -57,13 +57,13 @@ async def start_message(message):
 
 @dp.message_handler(content_types=["text"])
 async def mes_text(message):
-    from commands_to_handle.add_handler_command import add_training_handler
+    from commands_to_handle import add_training_handler
     await add_training_handler(message, bot, data, typs, typ)
 
 
 @dp.callback_query_handler(posts_cb.filter())
 async def json_box(query: types.CallbackQuery, callback_data: dict):
-    from commands_to_handle.PayForTraining import pay_for_training
+    from commands_to_handle import pay_for_training
     await pay_for_training(bot, query, callback_data, data)
 
 
