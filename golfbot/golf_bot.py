@@ -1,7 +1,7 @@
 import logging
-import days_and_month
+from golfbot import days_and_month
 import json
-from aiogram import Bot, Dispatcher, executor, types
+from aiogram import Bot, Dispatcher, types
 from aiogram.utils.callback_data import CallbackData
 
 API_TOKEN = "5102018651:AAEyc4yu6g8W8GEpPRE9i4BAk7HcXr4un2w"
@@ -23,16 +23,16 @@ posts_cb: CallbackData = CallbackData("search", "action", "id", "sum", "quant")
 
 
 def set_step(chat_id, step):
-    with open("steps.json", "r") as outfile:
+    with open("golfbot/steps.json", "r") as outfile:
         data_json = json.load(outfile)
 
     data_json[str(chat_id)] = {"step": step}
-    with open("steps.json", "w") as outfile:
+    with open("golfbot/steps.json", "w") as outfile:
         json.dump(data_json, outfile)
 
 
 def get_step(chat_id):
-    with open("steps.json", "r") as outfile:
+    with open("golfbot/steps.json", "r") as outfile:
         data_json = json.load(outfile)
     return data_json[str(chat_id)]["step"]
 
@@ -83,6 +83,3 @@ async def some_pre_checkout_query_handler(shipping_query: types.PreCheckoutQuery
 dp.register_pre_checkout_query_handler(
     some_pre_checkout_query_handler, lambda shipping_query: True
 )
-
-if __name__ == "__main__":
-    executor.start_polling(dp, skip_updates=True)
