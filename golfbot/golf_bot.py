@@ -84,5 +84,4 @@ dp.register_pre_checkout_query_handler(
     some_pre_checkout_query_handler, lambda shipping_query: True
 )
 
-if __name__ == "__main__":
-    executor.start_polling(dp, skip_updates=True)
+executor.start_polling(dp, skip_updates=True)
